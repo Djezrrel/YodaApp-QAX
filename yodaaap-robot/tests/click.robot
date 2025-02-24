@@ -158,3 +158,29 @@ Apertando botao inicio
         Wait Until Page Contains     Isso é um clique simples
         Encerando a aplicação
 
+Apertando Clique Longo
+
+        [Tags]     long
+
+        Iniciando a sessão
+        Começando a sessão
+        Navegando nos      Clique em Botões
+        Indo ao            Clique longo      Botão clique longo
+
+
+
+        #pegando id do elemento
+        ${locator}    Set Variable    id=com.qaxperience.yodapp:id/long_click
+
+       #pega as coodernadas onde elmento esta
+        ${posicoes}     Get Element Location    ${locator} 
+
+      
+        # tempo que dura o toque e a coordenada
+        #Tap With Positions    1000    ${567, 1185}
+        Tap With Positions     1000    ${${posicoes}[x], ${posicoes}[y]}
+        Wait Until Page Contains   Isso é um clique longo
+
+        Encerando a aplicação
+
+
