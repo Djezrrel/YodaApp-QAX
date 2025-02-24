@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.2.2 (Python 3.13.2 on win32)" generated="2025-02-23T20:54:58.007173" rpa="false" schemaversion="5">
+<suite id="s1" name="Click" source="C:\QaX-Mobile\yodaaap-robot\tests\click.robot">
+<test id="s1-t1" name="Apertando botao inicio" line="150">
+<kw name="Iniciando a sessão" owner="base">
+<kw name="Open Application" owner="AppiumLibrary">
+<arg>http://localhost:4723</arg>
+<arg>platformName=Android</arg>
+<arg>deviceName=Pixel 8 API 31</arg>
+<arg>automationName=UIAutomator2</arg>
+<arg>platformVersion=12</arg>
+<arg>udid=emulator-5554</arg>
+<arg>autoGrantPermissions=true</arg>
+<arg>app=${EXECDIR}/app/yodapp-beta.apk</arg>
+<doc>Opens a new application to given Appium server.
+Capabilities of appium server, Android and iOS,
+Please check https://appium.io/docs/en/2.1/cli/args/
+| *Option*            | *Man.* | *Description*     |
+| remote_url          | Yes    | Appium server url |
+| alias               | no     | alias             |
+| strict_ssl          | No     | allows you to send commands to an invalid certificate host like a self-signed one. |</doc>
+<status status="PASS" start="2025-02-23T20:54:58.193115" elapsed="8.843153"/>
+</kw>
+<status status="PASS" start="2025-02-23T20:54:58.192604" elapsed="8.843791"/>
+</kw>
+<kw name="Começando a sessão" owner="base">
+<kw name="Wait Until Page Contains" owner="AppiumLibrary">
+<arg>${start}</arg>
+<arg>5</arg>
+<doc>Waits until `text` appears on current page.</doc>
+<status status="PASS" start="2025-02-23T20:55:07.036835" elapsed="4.616571"/>
+</kw>
+<kw name="Click Text" owner="AppiumLibrary">
+<msg time="2025-02-23T20:55:12.163264" level="INFO">xpath criteria: //*[contains(@text,"QAX")]</msg>
+<arg>${start}</arg>
+<doc>Click text identified by ``text``.</doc>
+<status status="PASS" start="2025-02-23T20:55:11.653567" elapsed="0.509779"/>
+</kw>
+<status status="PASS" start="2025-02-23T20:55:07.036621" elapsed="5.126801"/>
+</kw>
+<kw name="Navegando nos" owner="base">
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-02-23T20:55:12.164020" level="INFO">${MENUESQUERDA} = xpath=//android.widget.ImageButton[@content-desc="Open navigation drawer"]</msg>
+<var>${MENUESQUERDA}</var>
+<arg>xpath=//android.widget.ImageButton[@content-desc="Open navigation drawer"]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-02-23T20:55:12.163891" elapsed="0.000157"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2025-02-23T20:55:13.361052" level="INFO">xpath criteria: //android.widget.ImageButton[@content-desc="Open navigation drawer"]
+xpath criteria: //android.widget.ImageButton[@content-desc="Open navigation drawer"]</msg>
+<arg>${MENUESQUERDA}</arg>
+<arg>5</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2025-02-23T20:55:12.164134" elapsed="1.197032"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2025-02-23T20:55:13.362112" level="INFO">Clicking element 'xpath=//android.widget.ImageButton[@content-desc="Open navigation drawer"]'.</msg>
+<msg time="2025-02-23T20:55:13.479517" level="INFO">xpath criteria: //android.widget.ImageButton[@content-desc="Open navigation drawer"]</msg>
+<arg>${MENUESQUERDA}</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2025-02-23T20:55:13.361297" elapsed="0.118296"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-02-23T20:55:13.479920" level="INFO">${MENUITENS} = xpath=//*[@resource-id="com.qaxperience.yodapp:id/rvNavigation"]//*[@text="Clique em Botões"]</msg>
+<var>${MENUITENS}</var>
+<arg>xpath=//*[@resource-id="com.qaxperience.yodapp:id/rvNavigation"]//*[@text="${botões-Navegar}"]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-02-23T20:55:13.479717" elapsed="0.000229"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2025-02-23T20:55:13.480841" level="INFO">Clicking element 'xpath=//*[@resource-id="com.qaxperience.yodapp:id/rvNavigation"]//*[@text="Clique em Botões"]'.</msg>
+<msg time="2025-02-23T20:55:14.458938" level="INFO">xpath criteria: //*[@resource-id="com.qaxperience.yodapp:id/rvNavigation"]//*[@text="Clique em Botões"]</msg>
+<arg>${MENUITENS}</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2025-02-23T20:55:13.480037" elapsed="0.979000"/>
+</kw>
+<arg>Clique em Botões</arg>
+<status status="PASS" start="2025-02-23T20:55:12.163643" elapsed="2.295497"/>
+</kw>
+<kw name="Indo ao" owner="base">
+<kw name="Wait Until Page Contains" owner="AppiumLibrary">
+<arg>${ITEM}</arg>
+<arg>5</arg>
+<doc>Waits until `text` appears on current page.</doc>
+<status status="PASS" start="2025-02-23T20:55:14.459807" elapsed="0.444939"/>
+</kw>
+<kw name="Click Text" owner="AppiumLibrary">
+<msg time="2025-02-23T20:55:15.480752" level="INFO">xpath criteria: //*[contains(@text,"Clique simples")]</msg>
+<arg>${ITEM}</arg>
+<doc>Click text identified by ``text``.</doc>
+<status status="PASS" start="2025-02-23T20:55:14.904884" elapsed="0.575936"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="AppiumLibrary">
+<arg>${Checkpoint}</arg>
+<doc>Waits until `text` appears on current page.</doc>
+<status status="PASS" start="2025-02-23T20:55:15.480939" elapsed="0.813357"/>
+</kw>
+<arg>Clique simples</arg>
+<arg>Botão clique simples</arg>
+<status status="PASS" start="2025-02-23T20:55:14.459453" elapsed="1.834946"/>
+</kw>
+<kw name="Click Text" owner="AppiumLibrary">
+<msg time="2025-02-23T20:55:16.924883" level="INFO">xpath criteria: //*[contains(@text,"CLIQUE SIMPLES")]</msg>
+<arg>CLIQUE SIMPLES</arg>
+<doc>Click text identified by ``text``.</doc>
+<status status="PASS" start="2025-02-23T20:55:16.294675" elapsed="0.630454"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="AppiumLibrary">
+<arg>Isso é um clique simples</arg>
+<doc>Waits until `text` appears on current page.</doc>
+<status status="PASS" start="2025-02-23T20:55:16.925992" elapsed="0.098561"/>
+</kw>
+<kw name="Encerando a aplicação" owner="base">
+<kw name="Close Application" owner="AppiumLibrary">
+<doc>Closes the current application and also close webdriver session.</doc>
+<status status="PASS" start="2025-02-23T20:55:17.025382" elapsed="0.435109"/>
+</kw>
+<status status="PASS" start="2025-02-23T20:55:17.024995" elapsed="0.435576"/>
+</kw>
+<status status="PASS" start="2025-02-23T20:54:58.192027" elapsed="19.268716"/>
+</test>
+<status status="PASS" start="2025-02-23T20:54:58.008454" elapsed="19.452876"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Click" id="s1" pass="1" fail="0" skip="0">Click</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
